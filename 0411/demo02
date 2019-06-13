@@ -1,0 +1,27 @@
+UDP数据报方法
+服务器端
+socket() 声明socket UDP为SOCK_DGRAM
+bind() 声明服务器端的IP地址和端口号,必须用元组表示
+sendto() 发送UDP消息，第一个参数为要发送的消息，第二个参数为要发送的IP地址和端口号
+recvfrom() 接受UDP消息,参数为接受消息的大小
+close() 关闭服务端连接
+
+客户端
+socket()、sendto() 、recvfrom()同服务端相同
+close() 关闭客户端连接
+
+TCP套接字方法
+服务器端
+socket() 声明socket TCP为SOCK_STREAM
+bind() 声明服务器端的IP地址和端口号，必须要用元组表示
+listen() 开始监听
+accpet() 等待客户端连接
+recv() 接受TCP消息
+send() 发送TCP消息
+close() 关闭服务端连接
+
+客户端
+socket()、recv()、send()同服务器相同
+connect() 连接服务器，参数为要连接服务器的IP地址和端口号，用元组表示
+close() 关闭客户端连接
+
